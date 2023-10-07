@@ -4,7 +4,9 @@
 
 Simple self-hosted frontend for Google Custom Search Engine.
 
-<img src="https://bonnie39.github.io/img/bdev-makeshift-img-cdn/voyage-preview.webp" width="720" />
+<div style="text-align:center">
+    <img src="https://bonnie39.github.io/img/bdev-makeshift-img-cdn/voyage-preview.webp" width="720" />
+</div>
 
 Prerequisites:
 
