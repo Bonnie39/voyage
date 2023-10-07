@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voyage</title>
+    <link rel="stylesheet" href="/css/styles-home.css">
+    <link rel="stylesheet" href="/css/preferences.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/img/logo.webp">
+		<link rel="apple-touch-icon" href="/img/logo.webp">
+		<link rel="icon" type="image/png" href="/img/logo.webp">
+  </head>
+
+  <body>
+
+    <div class="settings-button-container">
+      <button id="settings-toggle" class="settings-button">
+        <i class="fa fa-cog"></i>
+      </button>
+    </div>
+
+    <div id="settings-panel" class="settings-panel hidden">
+      <div class="settings-content">
+        <!-- Settings options go here -->
+        <!--
+        <label for="toggle1" class="switch-label">
+          Toggle Option 1
+          <input type="checkbox" id="toggle1" class="checkbox">
+          <span class="switch-slider"></span>
+        </label>
+        -->
+    
+        <!--
+        <label for="toggle2" class="switch-label">
+          Toggle Option 2
+          <input type="checkbox" id="toggle2" class="checkbox">
+          <span class="switch-slider"></span>
+        </label>
+        -->
+
+        <label for="change-api">
+          <h3>Google API</h3>
+          <p>
+            <span class="truncated-text" id="api-key-label">API Key: </span>
+          </p>
+          <p>
+            <span class="truncated-text" id="cse-id-label">CSE ID: </span>
+          </p>
+        </label>
+        <button id="change-api-button" class="settings-api-button">
+          Change API Key
+        </button>
+      </div>
+    </div>
+
+    
+    <div id="change-api-panel" class="change-api-panel hidden">
+      <div class="api-panel">
+        <h3>Update API Information</h3>
+        <div class="input-group">
+          <div class="label-container">
+            <label for="api-key-input" id="api-key-label-panel">API Key:</label>
+          </div>
+          <input id="api-key-input" type="text" placeholder="New API Key..">
+        </div>
+        <div class="input-group">
+          <div class="label-container">
+            <label for="cse-id-input" id="cse-id-label-panel">CSE ID:</label>
+          </div>
+          <input id="cse-id-input" type="text" placeholder="New CSE ID..">
+        </div>
+        <button id="update-api-button" class="settings-api-button">
+          Update Information
+        </button>
+      </div>
+    </div>
+    
+
+    <div id="site-container" class="site-container">
+      <div class="overlay" id="overlay"></div>
+  
+      <main>
+
+        <span class="circle-blue"></span>
+        <span class="circle-red"></span>
+
+        <div class="welcome-header">
+          <h1>Voyage</h1>  
+        </div>
+
+        <div class="search-bar">
+
+          <input id="search-input" type="text" placeholder="Search..">
+          <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+
+        </div>
+
+      </main>
+
+    </div>
+    
+    <footer class="footer"> 
+        <p>© blah blah blah legal stuff 2023</p>
+    </footer>
+
+	<script src="/js/index.js"></script>
+  <script src="/js/search.js"></script>
+
+  </body>
+</html>

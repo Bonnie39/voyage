@@ -1,0 +1,132 @@
+/* Style for the search results container */
+#search-results-container {
+    margin-top: 20px;
+    margin-bottom: 64px;
+    max-width: 100%; /* Limit the maximum width to the viewport width */
+    padding: 0 20px; /* Add some horizontal padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculations */
+    overflow-x: hidden; /* Hide horizontal overflow on narrow screens */
+}
+
+/* Style for each search result item */
+.search-result {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 32px; /* Increased margin to create more space */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    max-width: 100%;
+}
+
+.search-result:hover {
+    border-color: #007bff !important;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0,2);
+}
+
+/* Style for search result titles */
+.search-result h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Style for search result links */
+.search-result a {
+    color: #0078d4;
+    text-decoration: none;
+    display: block; /* Ensure the link is a block-level element */
+    overflow: hidden; /* Hide overflowing content */
+    white-space: nowrap; /* Prevent line breaks within links */
+    text-overflow: ellipsis; /* Add ellipsis for truncated text */
+    max-width: 100%; /* Limit the maximum width to the container */
+    transition: color 0.3s ease-in-out !important;
+}
+
+.search-result a:hover {
+    color: #3aa5f7;
+}
+
+/* Style for search result snippets/descriptions */
+.search-result p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (prefers-color-scheme: dark) {
+    .search-result p {color: #a5a5a5;}
+    .search-result h3 {color: #eee;}
+    .search-result {background-color: #222; border: 1px solid #444;}
+    .search-filters button:not(.active-section) {background-color: #333 !important; color: #eee;}
+    .search-filters button:not(.active-section):hover {background-color: #555 !important; box-shadow: 0 2px 8px rgba(0, 123, 255, 0.35) !important;}
+    .search-filters button:not(.active-section):active {background-color: #777 !important; box-shadow: 0 2px 8px rgba(0, 123, 255, 0.35) !important;}
+    .search-filters button.active-section {background-color: #555 !important; color: #eee !important;}
+}
+
+.search-filters button {
+    margin-top: 16px;
+    height: 32px;
+    max-width: 64px;
+    min-width: 48px;
+    border-radius: 25px;
+    border: 6px #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-filters button:hover {
+    background-color: #e8e8e8;
+    border-color: #007bff; /* Change the border color on hover */
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); /* Add a subtle box shadow */
+}
+
+.search-filters button:active {
+    background-color: #cfcfcf;
+    border-color: #007bff; /* Change the border color on hover */
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); /* Add a subtle box shadow */
+}
+
+.active-section {
+    border-color: #ff0000 !important; /* Change the border color on hover */
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.35) !important; /* Add a subtle box shadow */
+    background-color: #eeeeee !important;
+}
+
+/* CSS for image result grid */
+.image-results-container {
+    margin-top: -32px;
+    margin-bottom: 96px;
+    flex-grow: 1; /* Make the container grow to take available space */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 16px;
+    max-width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.image-result {
+    /* Style for each image result */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-height: 400px; /* Set a maximum height for each .image-result */
+}
+
+.image-result img {
+    /* Style for the image preview */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+    scale: 1.1;
+}
+
+.image-result img:hover {
+    /* Style for the image on hover */
+    transform: scale(1.05);
+}

@@ -1,0 +1,240 @@
+/* Reset some default styles */
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+  
+  /* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+  
+  /* Center the main content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.welcome-header {
+  z-index: 2;
+}
+
+.search-bar {
+  position: relative; /* Set a relative position for the search-bar */
+  z-index: 3; /* Set a higher z-index than the circle */
+  width: 100%;
+  align-items: left !important;
+}
+  
+  /* Style the heading within the "welcome-header" div */
+  .welcome-header h1 {
+    font-size: 2.5rem; /* Larger heading font size */
+    color: #333;
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+  }
+  
+  /* Style the "search-bar" div */
+  .search-bar input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded input field */
+    width: 300px;
+    font-size: 1rem;
+    margin-right: 10px; /* Add space between input and button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+    z-index: 2;
+  }
+  
+  /* Style the input placeholder text */
+  .search-bar input[type="text"]::placeholder {
+    color: #999;
+  }
+  
+  /* Style the search button within the "search-bar" div */
+  .search-bar button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.25s ease-in-out;
+    z-index: 2;
+  }
+  
+  /* Style the search button icon */
+  .search-bar button[type="submit"] i {
+    margin-right: 5px;
+  }
+
+  /* Hover effect for the search bar input */
+.search-bar input[type="text"]:hover {
+    border-color: #007bff; /* Change the border color on hover */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Add a subtle box shadow */
+  }
+  
+  /* Hover effect for the search button */
+  .search-bar button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Add a subtle box shadow */
+  }
+  
+  /* Click effect for the search button */
+  .search-bar button[type="submit"]:active {
+    background-color: #003d80; /* Even darker blue on click */
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Add a subtle box shadow */
+  }
+  
+  /* Style links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+  
+  /* Style the favicon */
+link[rel="icon"] {
+    display: block;
+    margin: 20px auto;
+}
+  
+  /* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+    .welcome-header h1 {
+      font-size: 1.5rem; /* Reduce heading font size */
+    }
+    .search-bar input[type="text"] {
+      width: 100%; /* Make the input full width */
+      max-width: 100%; /* Remove maximum width limit */
+      margin-right: 0; /* Remove margin between input and button */
+      margin-bottom: 10px; /* Add space below input */
+    }
+    .search-bar button[type="submit"] {
+      width: 100%; /* Make the button full width */
+      max-width: 100%; /* Remove maximum width limit */
+    }
+    .circle-blue {
+      margin-left: 125px !important;
+      margin-bottom: 145px !important;
+      height: 84px !important;
+      width: 84px !important;
+    }
+    .circle-red {
+      margin-left: -125px !important;
+      margin-bottom: 84px !important;
+      height: 52px !important;
+      width: 52px !important;
+    }
+}
+
+.footer {
+  align-items: center;
+  text-align: center;
+  /* position: relative; */ /* Remove this line */
+  color: #7b7b7b;
+  margin-top: -64px;
+  /* negative value of footer height */
+  height: 64px;
+  clear: both;
+  background-color: #e6e6e6;
+}
+
+.footer p {
+    padding-top: 22px;
+    font-size: 0.8rem;
+}
+
+.topmenu-button {
+    position: absolute;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1f1f1f; /* Dark background color */
+      color: #fff; /* Light text color */
+    }
+  
+    /* Modify specific elements for dark mode */
+    .welcome-header h1 {
+      color: #eee; /* Lighter heading text color */
+    }
+  
+    .search-bar input[type="text"] {
+      background-color: #222; /* Darker input background color */
+      border: 1px solid #444; /* Darker input border color */
+      color: #fff; /* Light input text color */
+    }
+
+    input:focus {
+      outline: 2px #444;
+    }
+  
+    .search-bar input[type="text"]::placeholder {
+      color: #ccc; /* Light input placeholder text color */
+    }
+  
+    .search-bar button[type="submit"] {
+      background-color: #0056b3; /* Darker blue button color */
+      color: #fff; /* Light button text color */
+    }
+
+    .circle-blue {
+      background-color: rgba(0, 86, 179, 0.5) !important;
+      box-shadow: 0 2px 20px rgba(0, 123, 255, 0.25) !important;
+    }
+
+    .circle-red {
+      background-color: rgba(200, 0, 0, 0.5) !important;
+      box-shadow: 0 2px 20px rgba(255, 0, 0, 0.25) !important;
+    }
+  
+    /* Add more dark mode styles as needed */
+  }
+  
+  /* Hover effect for the search bar input in dark mode */
+  @media (prefers-color-scheme: dark) {
+    .search-bar input[type="text"]:hover {
+      border-color: #007bff; /* Change border color on hover */
+      box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2); /* Add a subtle box shadow */
+    }
+  }
+  
+  /* Hover effect for the search button in dark mode */
+  @media (prefers-color-scheme: dark) {
+    .search-bar button[type="submit"]:hover {
+      background-color: #007bff; /* Dark blue button color on hover */
+    }
+  }
+  
+  /* Click effect for the search button in dark mode */
+  @media (prefers-color-scheme: dark) {
+    .search-bar button[type="submit"]:active {
+      background-color: #003d80; /* Even darker blue button color on click */
+    }
+  }
+  
+  /* Dark mode styles for the footer */
+  @media (prefers-color-scheme: dark) {
+    .footer {
+      background-color: #191919; /* Dark gray footer background color */
+      color: #ccc; /* Light footer text color */
+    }
+  
+    .footer p {
+      padding-top: 22px;
+      font-size: 0.8rem;
+    }
+  }
+
+  input:focus {
+    outline: 2px #ccc;
+  }
