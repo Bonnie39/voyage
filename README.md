@@ -8,6 +8,10 @@ Simple self-hosted frontend for Google Custom Search Engine.
     <img src="https://bonnie39.github.io/img/bdev-makeshift-img-cdn/voyage-preview.webp" width="720" />
 </div>
 
+### Why use this?
+
+While this engine does use Google's API to perform searches, you aren't directly connecting to google.com which means none of Google's analytics and tracking is running in the background as you search. They do still collect some data on your API usage, though it's minimal compared to using their proprietary search engine. **ALSO** You don't get any of the spammy "promoted" or advertisement links that usually appear at the top of the search page. Using a custom frontend for Google's search API gives you ONLY the results you need.
+
 Prerequisites:
 
 ## 1: Google Custom Search Engine & CSE ID
