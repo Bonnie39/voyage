@@ -65,6 +65,7 @@
 }
 
 .search-filters button {
+    color: #333;
     margin-top: 16px;
     height: 32px;
     max-width: 64px;

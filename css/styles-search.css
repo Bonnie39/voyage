@@ -136,20 +136,43 @@ link[rel="icon"] {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  /* position: relative; */ /* Remove this line */
+  position: relative;
   color: #7b7b7b;
-  margin-top: -64px;
-  /* negative value of footer height */
+  margin-top: -64px; /* negative value of footer height */
   height: 64px;
   clear: both;
   background-color: #e6e6e6;
 }
 
+.left-content {
+  flex: 1; /* Allow the left content to grow and take available space */
+  text-align: left;
+  padding-left: 16px; /* Adjust spacing between the left edge and the link */
+}
+
+.right-content {
+  flex: 1; /* Allow the right content to grow and take available space */
+  text-align: right;
+  padding-right: 32px; /* Adjust padding on the right side of the paragraph */
+}
+
 .footer p {
-    padding-top: 22px;
-    font-size: 0.8rem;
+  font-size: 0.8rem;
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+.footer a {
+  font-size: 0.8rem;
+  margin-left: 16px; /* Adjust spacing between link and paragraph */
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .topmenu-button {
@@ -232,6 +255,7 @@ link[rel="icon"] {
     .footer p {
       padding-top: 22px;
       font-size: 0.8rem;
+      margin-bottom: 22px;
     }
   }
 

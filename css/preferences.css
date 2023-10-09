@@ -7,8 +7,8 @@
   color: #333; /* Button text color */
   border: none;
   border-radius: 50%; /* Make it round */
-  width: 40px; /* Button width */
-  height: 40px; /* Button height */
+  width: 40px !important; /* Button width */
+  height: 40px !important; /* Button height */
   font-size: 1.5rem; /* Font size of the gear icon */
   cursor: pointer;
   z-index: 25;
@@ -35,7 +35,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .settings-button {background-color: #1f1f1f; color: #eee;}
+  .settings-button {background-color: #1f1f1f; color: #eee; height: 40px !important; width: 40px !important;}
   .settings-button:hover {background-color: #313131;}
   .settings-button:active {background-color: #474747;}
   .settings-panel {background-color: #222 !important; color: #eee !important; border: 1px solid #444 !important;}
